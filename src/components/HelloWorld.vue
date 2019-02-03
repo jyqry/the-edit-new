@@ -74,9 +74,14 @@
     </div>
 
     <div class="album" @dragover.prevent @drop="onDrop">
-      <div class="photo" v-for="(image, index) in album" :key="`album-image${index}`">
-        <img :src="image">
-        <div class="add-this" @click="editImage(index)"></div>
+      <div v-show="album.length < 1" class="notice">
+        이미지를 이 곳에 드래그 앤 드롭 하세요
+      </div>
+      <div class="photos" v-show="album.length > 0" v-bind:style="{ width: `${60 * album.length} px` }">
+        <div class="photo" v-for="(image, index) in album" :key="`album-image${index}`" v-bind:style="{ 'background-image': `url(${image})` }">
+          <!--<img :src="image">-->
+          <div class="add-this" @click="editImage(index)"></div>
+        </div>
       </div>
     </div>
 
@@ -405,25 +410,38 @@ export default {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
-    height: 70px;
+    height: 90px;
     z-index: 999;
     background-color: #000000;
     font-size: 0;
     box-shadow: 0px 0 4px 1px rgba(0, 0, 0, 0.3);
     padding: 10px;
+    overflow-x: auto;
+    .notice {
+      display: block;
+      flex: 1;
+      align-self: center;
+      font-size: 14px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .photos {
+      display: flex;
+    }
     .photo {
       position: relative;
-      display: inline-block;
+      display: block;
       margin-right: 10px;
-      width: auto;
+      width: 50px;
       height: 50px;
       border-radius: 4px;
       overflow: hidden;
-      img {
-        border-radius: 4px;
-        max-height: 50px;
-      }
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       &:hover {
         .add-this {
           opacity: 1;
@@ -458,7 +476,7 @@ export default {
     background-color: #5e5e5e;
     font-size: 0;
     box-shadow: 0px 0 4px 1px rgba(0, 0, 0, 0.3);
-    overflow-y: auto;
+    overflow-y: scroll;
     .setting {
       font-size: 12px;
       margin-bottom: 10px;
