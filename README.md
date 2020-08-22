@@ -16,7 +16,7 @@
 * [[새로나왔] 사는 게 제일 좋아](http://the-edit.co.kr/19166)
 * [[새로나왔] 12월엔 새로 살 거야](http://the-edit.co.kr/18266)
 * [[새로나왔] 신상 인사이드](http://the-edit.co.kr/17407)
-* [and many more](http://the-edit.co.kr/30895)
+* [and many more](http://the-edit.co.kr/?s=%EC%83%88%EB%A1%9C%EB%82%98%EC%99%94)
 
 # See Also
 * [https://chichi.space/post/너의-채팅방](https://chichi.space/post/너의-채팅방)
