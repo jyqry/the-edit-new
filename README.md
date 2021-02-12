@@ -19,4 +19,4 @@
 * [and many more](http://the-edit.co.kr/?s=%EC%83%88%EB%A1%9C%EB%82%98%EC%99%94)
 
 # See Also
-* [https://chichi.space/post/너의-채팅방](https://chichi.space/post/너의-채팅방)
+* [https://chichi.space/post/너의-채팅방/](https://chichi.space/post/%EB%84%88%EC%9D%98-%EC%B1%84%ED%8C%85%EB%B0%A9/)
